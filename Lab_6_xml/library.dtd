@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE library 
+	[ 
+	<!ELEMENT library (books,readers)>
+	<!ELEMENT books (book+)>
+	<!ELEMENT book (title,author,year )>
+	<!ATTLIST book id CDATA #REQUIRED>
+	<!ATTLIST book library_name CDATA #REQUIRED>
+	<!ELEMENT title (#PCDATA)> 
+	<!ELEMENT author (#PCDATA)>
+	<!ELEMENT year (#PCDATA)>  	
+	<!ELEMENT readers (reader+)> 
+	<!ELEMENT reader (first_name,last_name,telephone )> 
+	<!ATTLIST reader number_ticket CDATA #REQUIRED>
+	<!ELEMENT first_name (#PCDATA)>
+	<!ELEMENT last_name (#PCDATA)>
+	<!ELEMENT telephone (#PCDATA)>
+	]
+>

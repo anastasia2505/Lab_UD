@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE library 
+	[ 
+	<!ELEMENT library (books,readers)>
+	<!ELEMENT books (book+)>
+	<!ELEMENT book (title,author,year )>
+	<!ATTLIST book id CDATA #REQUIRED>
+	<!ATTLIST book library_name CDATA #REQUIRED>
+	<!ELEMENT title (#PCDATA)> 
+	<!ELEMENT author (name_author,country_author)>
+	<!ELEMENT name_author (#PCDATA)>
+	<!ELEMENT country_author (#PCDATA)>
+	<!ELEMENT year (#PCDATA)>  
+	<!ELEMENT readers (reader+)> 
+	<!ELEMENT reader (first_name,last_name,telephone )> 
+	<!ATTLIST reader number_ticket CDATA #REQUIRED>
+	<!ELEMENT first_name (#PCDATA)>
+	<!ELEMENT last_name (#PCDATA)>
+	<!ELEMENT telephone (#PCDATA)>
+	]>
+
+
+	<library>
+		<books>
+			<book id="1" library_name="Центральная">
+				<title>1984</title>
+				<author>
+					<name_author>Оруэлл</name_author>
+					<country_author>Великобритания</country_author>
+				</author>
+				<year>1949</year>
+			</book>
+			
+			<book id="2" library_name="Центральная">
+				<title>Детство</title>
+				<author>
+					<name_author>Толстой</name_author>
+					<country_author>Россия</country_author>
+				</author>
+				<year>1852</year>
+			</book>
+			
+			<book id="3" library_name="Центральная">
+				<title>Бесы</title>
+				<author>
+					<name_author>Достоевский</name_author>
+					<country_author>Россия</country_author>
+				</author>
+				<year>1871</year>
+			</book>
+			
+			<book id="4" library_name="Центральная">
+				<title>Вельд</title>
+				<author>
+					<name_author>Брэдбери</name_author>
+					<country_author>США</country_author>
+				</author>
+				<year>1950</year>
+			</book>
+		</books>
+		
+		<readers>
+			<reader number_ticket="173133">
+				<first_name>Анастасия</first_name>
+				<last_name>Рыкова</last_name>
+				<telephone>89159370044</telephone>
+			</reader>
+			
+			<reader number_ticket="173134">
+				<first_name>Иван</first_name>
+				<last_name>Иванов</last_name>
+				<telephone>89319677888</telephone>
+			</reader>
+			
+			<reader number_ticket="173135">
+				<first_name>Петр</first_name>
+				<last_name>Петров</last_name>
+				<telephone>89159374632</telephone>
+			</reader>
+		</readers>
+	</library>
